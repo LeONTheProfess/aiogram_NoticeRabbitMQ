@@ -12,6 +12,7 @@ class ModeEnum(str, Enum):
 class RabbitSettings(BaseSettings):
     host: str
     port: int
+    vhost: str
     user: SecretStr
     password: SecretStr
     queue: str

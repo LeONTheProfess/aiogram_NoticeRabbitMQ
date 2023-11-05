@@ -57,7 +57,7 @@ async def runConsumeRabbit():
         try:
             connection = await aiormq.connect(
                 f'amqp://{rabbit_config.user.get_secret_value()}:{rabbit_config.password.get_secret_value()}'
-                f'@{rabbit_config.host}:{rabbit_config.port}//',)
+                f'@{rabbit_config.host}:{rabbit_config.port}/{rabbit_config.vhost}',)
             channel = await connection.channel()
             await channel.basic_consume(queue=rabbit_config.queue, consumer_callback=callbackRabbit, no_ack=True)
             logging.warning("runConsumeRabbit подключились!")

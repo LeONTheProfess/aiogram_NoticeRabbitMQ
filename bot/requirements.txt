@@ -1,0 +1,3 @@
+aiogram
+aiormq
+pydantic-settings

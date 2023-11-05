@@ -1,0 +1,15 @@
+# rename this file to .env (with the following dot)
+
+# Bot token, get one from https://t.me/botfather
+BOT_TOKEN=12345:abcxyz
+
+
+#RabbitMQSettings
+
+RABBIT_HOST=192.168.0.66
+RABBIT_PORT=5672
+RABBIT_USER=user
+RABBIT_PASSWORD=password
+RABBIT_QUEUE=queue
+
+TZ=Europe/Moscow

@@ -8,7 +8,4 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 COPY . /bot
 
-ENV TZ=Europe/Moscow
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 CMD [ "python", "./bot.py" ]

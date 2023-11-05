@@ -1,0 +1,18 @@
+[Unit]
+Description=Telegram bot NoticeRabbitMQ
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=tgb
+# replace with your path to the directory where it is located `.env`
+WorkingDirectory=/home/User/bots/NoticeBot/
+# change path to `bot.py`
+ExecStart=/usr/bin/python3 /home/User/bots/NoticeBot/bot/bot.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+notice-bot.service

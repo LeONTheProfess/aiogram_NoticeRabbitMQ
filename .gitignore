@@ -1,3 +1,5 @@
 /.env
 /docker-compose.yml
 /logs
+/bot/__pycache__
+.vscode/settings.json

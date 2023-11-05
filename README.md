@@ -1,4 +1,4 @@
-# Bot to send notifications from RabbitMQ
+# Telegram bot to send notifications from RabbitMQ
 
 <a href="https://hub.docker.com/r/leontheprofess/aiogram_notice_rabbitmq"><img src="https://img.shields.io/badge/aiogram__notice__rabbitmq
 -docker%20hub-blue"></a>
@@ -28,11 +28,11 @@ This bot sends notifications received from the RabbitMQ queue. The received mess
 
 ### Systemd 
 1. Perform steps 1-4 from "just to test" option above;
-2. Copy `aiogram-notice-bot.example.service` to `aiogram-notice-bot.service` (or whatever your prefer), open it and edit `WorkingDirectory` 
+2. Copy `notice-bot.example.service` to `notice-bot.service` (or whatever your prefer), open it and edit `WorkingDirectory` 
 and `ExecStart` directives;
 3. Copy (or symlink) that service file to `/etc/systemd/system/` directory;
-4. Enable your service `sudo systemctl enable aiogram-notice-bot --now`;
-5. Check that service is running: `systemctl status aiogram-notice-bot` (can be used without root privileges).
+4. Enable your service `sudo systemctl enable notice-bot --now`;
+5. Check that service is running: `systemctl status notice-bot` (can be used without root privileges).
 
 ### Docker + Docker Compose
 1. Get `docker-compose.example.yml` file and rename it as `docker-compose.yml`;

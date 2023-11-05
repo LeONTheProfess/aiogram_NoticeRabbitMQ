@@ -1,7 +1,7 @@
 version: "3.8"
 services:
     notice_bot:
-        image: leontheprofess/aiogram_notice_rabbitmq
+        image: leontheprofess/notice_rabbitmq_bot
         restart: unless-stopped
         env_file: .env
         volumes:

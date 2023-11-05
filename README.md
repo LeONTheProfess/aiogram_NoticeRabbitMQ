@@ -1,7 +1,6 @@
 # Telegram bot to send notifications from RabbitMQ
 
-<a href="https://hub.docker.com/r/leontheprofess/aiogram_notice_rabbitmq"><img src="https://img.shields.io/badge/aiogram__notice__rabbitmq
--docker%20hub-blue"></a>
+<a href="https://hub.docker.com/r/leontheprofess/notice_rabbitmq_bot"><img src="https://img.shields.io/badge/notice__rabbitmq__bot-docker%20hub-blue"></a>
 
 This bot sends notifications received from the RabbitMQ queue. The received message from queue must be in JSON format:
 

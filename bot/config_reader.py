@@ -25,6 +25,7 @@ class RabbitSettings(BaseSettings):
 
 class BotSettings(BaseSettings):
     token: SecretStr
+    admin: int
 
     class Config:
         env_file = '.env'

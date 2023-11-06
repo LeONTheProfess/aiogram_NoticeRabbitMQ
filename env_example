@@ -2,7 +2,7 @@
 
 # Bot token, get one from https://t.me/botfather
 BOT_TOKEN=12345:abcxyz
-
+BOT_ADMIN=123456789
 
 #RabbitMQSettings
 

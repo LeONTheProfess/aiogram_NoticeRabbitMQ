@@ -1,5 +1,5 @@
 from aiogram import Bot, Dispatcher
-from aiogram.types import Message
+from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram.filters.command import Command
 import os, sys, asyncio, json, logging, aiormq
 from sys import stdout
@@ -23,8 +23,11 @@ logging.basicConfig(handlers=[fileHandler,consoleHandler],
 @dp.message(Command("start"))
 async def cmd_start(message: Message):
     logging.info(f'Пользователь {message.from_user.id} дал команду start')
-    await message.reply("Теперь вы будете получать уведомления из системы ЕМЕ! Для подписки на определённые уведомления обратитесь к @leon_ob.")
-    await bot.send_message(254922339, f'Пользователь {message.from_user.full_name} {message.from_user.id} нажал start')
+    await message.reply(text="Теперь вы будете получать уведомления из системы ЕМЕ!" 
+                        "Для подписки на определённые уведомления обратитесь к @leon_ob.",
+                        reply_markup=ReplyKeyboardRemove())
+    if bot_config.admin != 0:
+        await bot.send_message(bot_config.admin, f'Пользователь {message.from_user.full_name} {message.from_user.id} нажал start')
 
 @dp.message(Command("help"))
 async def cmd_help(message: Message):
